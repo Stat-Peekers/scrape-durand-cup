@@ -1,0 +1,18 @@
+[
+	{
+		"tour_id" : 366,
+		"tour_name" : "Durand Cup 2022",
+		"series.name" : "Durand Cup 2022",
+		"series.short_name" : "Durand Cup 2022",
+		"series.parent_series_id" : 366,
+		"series.parent_series_name" : "Durand Cup"
+	},
+	{
+		"tour_id" : 237,
+		"tour_name" : "Durand Cup 2021",
+		"series.name" : "Durand Cup 2021",
+		"series.short_name" : "Durand Cup 2021",
+		"series.parent_series_id" : 237,
+		"series.parent_series_name" : "Durand Cup"
+	}
+]
