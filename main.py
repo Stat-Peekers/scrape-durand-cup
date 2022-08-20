@@ -1,11 +1,9 @@
 """
-@title: Top calling module to scrape RF Dev League data
+@title: Main script to scrape Durand Cup match-wise data
 @author: Sushant Rao / @StatPeekers
 """
 
-import sys
 from tqdm import trange
-from selenium import webdriver
 
 from utils.common_functions import select_tournament_name, get_data_from_file_json
 
