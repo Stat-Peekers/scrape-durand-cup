@@ -45,9 +45,9 @@ class TopScrape:
         all_match_data_dict = self._get_json_from_requests(self.scrape_url)
         time.sleep(5)
         is_match_ended = all_match_data_dict["fixture"]["ft"]
-        is_file_exists = sum(1 if str(self.match_id) in filename else 0 for filename in os.listdir("data/" + self.tour_name + "/match_json_files/"))
+        json_dir = "data/" + str(self.tour_name) + "/match_json_files/"
+        if not os.path.exists(json_dir):
+            os.makedirs(json_dir)
+        is_file_exists = sum(1 if str(self.match_id) in filename else 0 for filename in os.listdir(f"data/{self.tour_name}/match_json_files/"))
         if is_match_ended and not is_file_exists:
-            json_dir = "data/" + str(self.tour_name) + "/match_json_files/"
-            if not os.path.exists(json_dir):
-                os.makedirs(json_dir)
             put_data_to_file_json(json_dir + "/" + str(self.match_id) + ".json", all_match_data_dict)

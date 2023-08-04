@@ -8,11 +8,27 @@
 		"series.parent_series_name" : "Durand Cup"
 	},
 	{
+		"tour_id" : 620,
+		"tour_name" : "Durand Cup 2023",
+		"series.name" : "Durand Cup 2023",
+		"series.short_name" : "Durand Cup 2023",
+		"series.parent_series_id" : 620,
+		"series.parent_series_name" : "Durand Cup"
+	},
+	{
 		"tour_id" : 237,
 		"tour_name" : "Durand Cup 2021",
 		"series.name" : "Durand Cup 2021",
 		"series.short_name" : "Durand Cup 2021",
 		"series.parent_series_id" : 237,
 		"series.parent_series_name" : "Durand Cup"
+	},
+	{
+		"tour_id" : 603,
+		"tour_name" : "Calcutta Football League Premier Division 2023",
+		"series.name" : "Calcutta Football League Premier Division 2023",
+		"series.short_name" : "Calcutta Football League Premier Division 2023",
+		"series.parent_series_id" : 603,
+		"series.parent_series_name" : "Calcutta Football League Premier Division"
 	}
 ]

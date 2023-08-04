@@ -10,9 +10,16 @@ from selenium.common import NoSuchElementException
 from utils.common_functions import select_tournament_name, get_data_from_file_json, put_data_to_file_json
 
 
-def get_fixture_info(tour_id: int, base_url: str, event_no: int, month=0, year=2022):
+def get_fixture_info(
+    tour_id: int,
+    tour_name: str,
+    base_url: str,
+    event_no: int,
+    month=0,
+    year=2022
+    ):
 
-    s_driver = webdriver.Chrome('chromedriver.exe')
+    s_driver = webdriver.Chrome()
     scrape_url = base_url + "event=" + str(event_no) + "&month=" + str(month) + "&year=" + str(year)
     s_driver.get(scrape_url)
     from time import sleep
@@ -54,10 +61,15 @@ if __name__ == "__main__":
             "event_no": 19,
             "month": 0,
             "year": 2022
+        },
+        620: {
+            "event_no": 19,
+            "month": 0,
+            "year": 2023
         }
     }
     b_url = "https://www.the-aiff.com/calendar?"
     e_no = mapping_dict[t_id]["event_no"]  # for Durand Cup
     mnth = mapping_dict[t_id]["month"]  # 0 for all months in a calender year else specify the month number
     yr = mapping_dict[t_id]["year"]  # Year of the tournament
-    get_fixture_info(t_id, b_url, e_no, mnth, yr)
+    get_fixture_info(t_id, t_name, b_url, e_no, mnth, yr)
