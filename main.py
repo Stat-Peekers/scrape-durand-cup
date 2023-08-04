@@ -23,6 +23,10 @@ if __name__ == "__main__":
     """
     Set-up logger
     """
+    t_id, t_name = select_tournament_name()
+    # Scrape pts table:
+    from dataExtraction.pts_table_scraping import PtsTable
+    PtsTable(t_id, t_name)
     while True:
         initial_input = input("Select type of scraping:\n1. Single match\n2. All matches in tournament\n")
         try:
@@ -33,7 +37,7 @@ if __name__ == "__main__":
                 print("Input should be either 1 or 2. Try again...\n")
         except ValueError:
             print("You have not entered a valid numeric value. Try again...\n")
-    t_id, t_name = select_tournament_name()
+
     # Scrape match-wise data:
     from dataExtraction.top_scrape_module import TopScrape
     # Get list of match_ids
